@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCaisse.MainPage">
+    
+
+    <ContentPage.Content>
+        <ListView
+            x:Name="maList" RowHeight="50">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            Margin="15,0"
+                            
+                            
+                            VerticalOptions="Center">
+                            <Label
+                                Text="{Binding Date}"
+                                TextColor="Black"
+                                FontSize="Large"
+                                HorizontalOptions="FillAndExpand"/>
+
+                            <Label
+                                Text="Commande N°"
+                                TextColor="Black"
+                                FontSize="Large"/>
+                            <Label
+                               
+                                Text ="{Binding Commande}"
+                                TextColor="Black"
+                                FontSize="Large"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+
+</ContentPage>
